@@ -1,7 +1,8 @@
 header  {
 	position: relative;
-	background-color: #efefef;
+	// background-color: #efefef;
 	z-index: 9;
+
 
 	.logo {
 		margin: 0 auto 10px;
@@ -32,50 +33,20 @@ header  {
 	}
 
 	.navigation-block {
-		padding: 6px 0;
+		padding: 15px 0 6px;
 		overflow: hidden;
-		background-color: #d7d7d7;
-	}
-
-	#search-form {
-		float: left;
-		max-width: 75%;
-		width: auto;
-	}
-
-	#search-field {
-		width: 30px;
-		box-sizing: border-box;
-		border: 2px solid transparent;
-		border-radius: 4px;
-		font-size: 16px;
-		background-color: inherit;
-		background-image: url("../images/search-icon.png");
-		background-position: 5px;
-		background-repeat: no-repeat;
-		padding: 5px 10px 5px 35px;
-		-webkit-transition: width 0.4s ease-in-out;
-		transition: width 0.4s ease-in-out;
-		outline: none;
-		cursor: pointer;
-
-		&:focus {
-			width: 100%;
-			border-color: #ccc;
-			background-color: #ccc;
-		}
+		background-color: transparent;
 	}
 
 	.basket-wrapper {
-		float: right;
 
 		.item-count {
 			float: left;
-			margin: 4px 8px 0 0;
+			margin: 4px 15px 0 0;
 			
 			a {
-				color: #535353;
-				font: 400 22px / 24px $Arial;
+				color: #de5f12;
+				font: 700 24px / 26px $Arial;
 			}
 
 			&.items-there {
@@ -85,8 +56,111 @@ header  {
 			}
 		}
 		.basket-icon {
-			float: right;
 			margin: 2px 0 0 0;
+		}
+	}
+	.add-product-mobile {
+		width: 230px;
+		height: 35px;
+		margin: 20px 0;
+		overflow: hidden;
+		border-radius: 4px;
+		border: 1px solid #723b0b;
+		background-image: linear-gradient(to top, #b54209 0%, #f36e16 100%);
+
+		a {
+			float: left;
+			margin: 0 0 0 19px;
+			text-align: center;
+			color: #ffffff;
+			font: 700 24px / 35px $Arial;
+		}
+	}
+}
+.login-page-inside {
+	height: auto;
+	background-size: cover;
+	box-shadow: 0 3.5px 4px rgba(0, 0, 0, 0.2);
+
+	.header-top {
+		height: 65px;
+		background: url('../images/header-bg.jpg');
+		background-size: cover;
+	}
+
+	.logo-block {
+		margin: 0 auto;
+		padding: 10px 0 0;
+		text-align: center;
+		width: 175px;
+		text-align: left;
+
+		.logo-title {
+			color: #ffffff;
+			font: 500 23px / 25px $Arial;
+
+			a {
+				color: #ffffff;
+			}
+		}
+
+		.logo-sign {
+			color: #ffffff;
+			font: 300 13px / 18px $Arial;
+
+			a {
+				color: #ffffff;
+			}
+		}
+	}
+
+	.header-logo-block {
+		background-color: #fff;
+		text-align: center;
+		overflow: hidden;
+
+		.company-logo {
+			margin: 7px auto 8px;
+			color: #000101;
+			font: 100 30px / 30px $HelveticaNeueLTPro;
+
+			a {
+				color: #000101;
+				text-decoration: none;
+				&:link,
+				&:active {
+					color: #000101;
+				}
+			}
+		}
+
+		.color-list {
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			background-color: #cacaca;
+			overflow: hidden;
+			font-size: 0;
+
+			li {
+				display: inline-block;
+				width: 45px;
+				height: 3px;
+				margin: 0 -3px;
+			}
+
+			.color-1 {
+				background-color: #ffaa01;
+			}
+			.color-2 {
+				background-color: #1a999e;
+			}
+			.color-3 {
+				background-color: #f5de0a;
+			}
+			.color-4 {
+				background-color: #e95e38;
+			}
 		}
 	}
 }

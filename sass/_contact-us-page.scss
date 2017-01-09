@@ -1,9 +1,6 @@
 .type-nav-contact-us {
-	height: 140px;
+	height: auto;
 	overflow: hidden;
-	.full-img {
-		height: 280px;
-	}
 	.desctop-services-menu {
 		display: none;
 	}
@@ -12,20 +9,26 @@
 	&.services-section-contact-us {
 		border: none;
 		padding: 0;
+
+		.title-block {
+			.title {
+				text-transform: uppercase;
+			}
+		}
 	}
 }
 
 .contact-us-preffoter {
-	background: url("../images/special-offers-bg.jpg") no-repeat;
-	background-size: cover;
+	background-image: url("../images/gray-pages-bg.jpg");
+	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 
 	.preffoter-content-bg {
 		margin: 0 auto;
 		overflow: hidden;
 		position: relative;
 		padding-bottom: 0;
-		background: rgba(0, 0, 0, 0.4);
 
 		.contact-block {
 			max-width: 630px;
@@ -34,6 +37,14 @@
 			.contact-row {
 				overflow: hidden;
 				margin: 15px auto;
+
+				.edit-customize {
+					float: right;
+				}
+
+				.customize{
+					clear: both;
+				}
 
 				.img-wrapper {
 					float: left;
@@ -50,11 +61,11 @@
 
 				.title {
 					overflow: hidden;
-					color: #fff;
+					color: #292929;
 					font: 400 22px / 28px $Arial;
 
 					a {
-						color: #fff;
+						color: #292929;
 
 						&:hover {
 							text-decoration: underline;
@@ -62,6 +73,56 @@
 					}
 				}
 			}
+		}
+		.social-block {
+			overflow: hidden;
+			margin: 50px auto;
+
+			.social-list {
+				overflow: hidden;
+				width: 80%;
+				margin: 0 auto;
+
+				& >	li {
+					width: 50%;
+					overflow: hidden;
+					float: left;
+					.first {
+						float: left;
+					}
+
+					.second {
+						float: right;
+					}
+					.first,
+					.second {
+						width: 50%;
+						li {
+							display: block;
+							margin: 15px 0;
+
+							.icon {
+								display: block;
+								width: 50%;
+								float: left;
+
+								.fa {
+									color: #000000;
+									font-size: 25px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.map-address {
+			display: block;
+			margin: 0 0 60px 0;
+			color: #d55910;
+			font: 700 25px / 28px $Arial;
+			text-decoration: underline;
 		}
 		.map-direction-block {
 			overflow: hidden;
@@ -92,16 +153,6 @@
 				filter: blur(20px);
 
 			} 
-			.get-direction {
-				display: block;
-				float: right;
-				position: relative;
-				z-index: 3;
-				margin: 0 16px 0 0;
-				color: #fff;
-				font: 700 25px / 27px $Arial;
-				text-transform: uppercase;
-			}
 		}
 
 		.mapWrapper {

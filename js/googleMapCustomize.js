@@ -49,6 +49,15 @@
 			var gmap = new google.maps.Map(document.getElementById('mapWrapper'), {
 				zoom: 14,
 				center: myLatLng,
+				zoomControl: false,
+				disableDoubleClickZoom: false,
+				mapTypeControl: false,
+				scaleControl: false,
+				scrollwheel: false,
+				panControl: false,
+				streetViewControl: false,
+				draggable : false,
+				overviewMapControl: false,
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
 				styles: [
 				{
@@ -231,7 +240,7 @@
 				map: gmap,
 				icon: "images/location-colore.png",
 				position: myLatLng,
-				label: 'Shopping Name',
+				label: '',
 				draggable: true
 			});
 		}

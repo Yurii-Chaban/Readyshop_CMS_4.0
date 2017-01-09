@@ -1,9 +1,6 @@
 .type-nav-cart {
-  height: 140px;
+  height: auto;
   overflow: hidden;
-  .full-img {
-    height: 280px;
-  }
   .under-content {
     display: none;
   }
@@ -13,10 +10,16 @@
     border: none;
     padding: 0;
   }
+
+  .special-offers-section {
+    .title {
+      text-transform: uppercase;
+    }
+  }
 }
 .cart-preffoter {
   padding: 16px 0 0;
-  background: url("../images/special-offers-bg.jpg") no-repeat;
+  background: url("../images/product-bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 
@@ -25,7 +28,7 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    padding-bottom: 35px;
+    padding-bottom: 235px;
     background: rgba(0, 0, 0, 0.4);
 
     .wrapper {

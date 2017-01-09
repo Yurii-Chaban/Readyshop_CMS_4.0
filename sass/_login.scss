@@ -2,29 +2,12 @@
 	font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
-	background: url('../images/bage-bg.jpg');
+	background-image: url("../images/gray-pages-bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
-@mixin site-container {
-	position: relative;
-	width: 100%;
-	box-sizing: border-box;
-	margin: auto;
-	background-size: contain;
-	background-position: center;
-}
-@mixin transition {
-	-webkit-transition: all .3s ease-in-out;
-	-moz-transition: all .3s ease-in-out;
-	-o-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-}
-@mixin border-box {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-}
 .wrapper {
 	max-width: 1010px;
 	margin: 0 auto;
@@ -53,37 +36,88 @@ a {
 		background: url('../images/header-bg.jpg');
 		background-size: cover;
 	}
+	.header-logo-block {
+		background-color: #fff;
+		text-align: center;
+		overflow: hidden;
+
+		.company-logo {
+			margin: 7px auto 8px;
+			color: #000101;
+			font: 100 30px / 30px $HelveticaNeueLTPro;
+
+			a {
+				color: #000101;
+				text-decoration: none;
+				&:link,
+				&:active {
+					color: #000101;
+				}
+			}
+		}
+
+		.color-list {
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			background-color: #cacaca;
+			overflow: hidden;
+			font-size: 0;
+
+			li {
+				display: inline-block;
+				width: 45px;
+				height: 3px;
+				margin: 0 -3px;
+			}
+
+			.color-1 {
+				background-color: #ffaa01;
+			}
+			.color-2 {
+				background-color: #1a999e;
+			}
+			.color-3 {
+				background-color: #f5de0a;
+			}
+			.color-4 {
+				background-color: #e95e38;
+			}
+		}
+	}
 
 	.logo-block {
 		margin: 0 auto;
-		padding: 20px 0 0;
+		padding: 10px 0 0;
 		text-align: center;
 
 		.logo-title {
-			color: #000;
-			font: 400 22px / 18px $Swiss721BT;
+			color: #ffffff;
+			font: 500 23px / 25px $Arial;
 
 			a {
-				color: #000;
+				color: #ffffff;
 			}
 		}
 
 		.logo-sign {
-			color: white;
-			font: 400 13px / 15px $Swiss721BT;
+			color: #ffffff;
+			font: 300 13px / 18px $Arial;
 
 			a {
-				color: white;
+				color: #ffffff;
 			}
 		}
 	}
 }
 // MAIN CONTENT FOR LOGIN PAGE
 .login-page-content {
+	overflow: hidden;
 
 	.login-block {
-		max-width: 474px;
+		max-width: 670px;
 		width: 100%;
+		overflow: hidden;
 		padding: 0 30px 0 29px;
 		@include border-box;
 		position: fixed;
@@ -118,20 +152,19 @@ a {
 				label {
 					display: block;
 					margin: 5px 0;
-					color: black;
-					font: 400 22px / 29px $Swiss721BT;
-					font-size: 22px;
-					font-weight: 400;
-					line-height: 29px;
+					color: #8b8b8b;
+					font: 700 24px / 26px $Arial;
 				}
+
 
 				#login,
 				#password {
-					height: 33px;
+					height: 45px;
 					padding-left: 10px;
-					border: 1px solid #828282;
-					background: inherit;
-					font: 400 20px / 33px $MyriadPro;
+					border-radius: 4px;
+					border: 1px solid #a1a1a1;
+					background-color: #dfdfdf;
+					font: 400 20px / 45px $MyriadPro;
 				}
 
 				#login,
@@ -145,8 +178,8 @@ a {
 					overflow: hidden;
 
 					label {
-						color: black;
-						font: 400 18px / 22px $Swiss721BT;
+						color: #8b8b8b;
+						font: 400 18px / 20px $Arial;
 						cursor: pointer;
 					}
 
@@ -156,8 +189,8 @@ a {
 					.checkbox-custom {
 						position: relative;
 						float: left;
-						width: 24px;
-						height: 24px;
+						width: 14px;
+						height: 14px;
 						margin: 0 10px 0 0;
 						background-color: gainsboro;
 						border: 1px solid #828282; 
@@ -188,20 +221,20 @@ a {
 					}
 				}
 				#sign-in {
+					float: right;
+					width: 85px;
+					height: 30px;
 					margin: 33px auto 0;
-					width: 267px;
-					height: 35px;
 					border: inherit;
 					text-align: center;
-					color: white;
-					font: 400 18px / 35px $Swiss721BT;
-					background-color: #b0b0b0;
+					color: #ffffff;
+					font: 400 16px / 27px $Arial;
+					border-radius: 4px;
+					border: 1px solid #723b0b;
+					background-image: linear-gradient(to top, #b54209 0%, #f36e16 100%);
 					cursor: pointer;
 					@include transition;
 
-					&:hover {
-						background-color: #000;
-					}
 				}
 			}
 		}
@@ -263,13 +296,13 @@ a {
 		.logo-block {
 			padding: 10px 0 0;
 
-			.logo-title {
-				font: 400 24px/28px "HelveticaNeueCyr", sans-serif;
-			}
+			// .logo-title {
+			// 	font: 400 24px/28px "HelveticaNeueCyr", sans-serif;
+			// }
 
-			.logo-sign {
-				font: 400 15px/17px "HelveticaNeueCyr", sans-serif;
-			}
+			// .logo-sign {
+			// 	font: 400 15px/17px "HelveticaNeueCyr", sans-serif;
+			// }
 		}
 	}
 
@@ -288,7 +321,7 @@ a {
 						}
 
 						label {
-							font: 600 14px/24px "Open Sans", sans-serif;
+							font: 600 14px/16px "Open Sans", sans-serif;
 						}
 					}
 				}
@@ -305,6 +338,56 @@ a {
 					#sign-in {
 						margin: 0 auto;
 						clear: both;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1024px) {
+	.login-page {
+		.logo-block {
+			.logo-title {
+				text-align: left;
+			}
+			.logo-sign {
+				text-align: left;
+			}
+		}
+	}
+	.login-page-content {
+		.login-block {
+			overflow: hidden;
+			#login-form {
+				.form-row {
+					overflow: hidden;
+					label {
+						float: left;
+					}
+					&:first-of-type {
+						label {
+							margin: 5px 0 0 45px;
+						}
+					}
+					&:nth-of-type(2) {
+						margin-top: 35px;
+					}
+					&:nth-of-type(3) {
+						width: 470px;
+						float: right;
+					}
+
+					#login,
+					#password {
+						float: right;
+						width: 470px;
+					}
+					.save-password-container {
+						label {
+							margin: 3px 0 0;
+							font-size: 18px;
+							line-height: 20px;
+						}
 					}
 				}
 			}
