@@ -1,0 +1,145 @@
+ /*
+Project Name: Readyshop 4.0
+Project URI: https://github.com/YuriyChaban/Readyshop_CMS_4.0
+Author: Yuriy Chaban
+Author URI: https://github.com/YuriyChaban/
+Description: Readyshop 4.0 Content Management System
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+*/
+
+/*--------------------------------------------------------------
+# Compass reset
+--------------------------------------------------------------*/
+@import "compass/reset";
+
+/*--------------------------------------------------------------
+# scss files
+--------------------------------------------------------------*/
+@import "variables";
+@import "mixins";
+	/*--------------------------------------------------------------
+	# fonts
+	--------------------------------------------------------------*/
+	@import "fonts";
+	/*--------------------------------------------------------------
+	# mobile menu
+	--------------------------------------------------------------*/
+	@import "menu";
+	/*--------------------------------------------------------------
+	# header
+	--------------------------------------------------------------*/
+	@import "header";
+	/*--------------------------------------------------------------
+	# footer
+	--------------------------------------------------------------*/
+	@import "footer";
+	/*--------------------------------------------------------------
+	# login page
+	--------------------------------------------------------------*/
+	@import "login";
+	/*--------------------------------------------------------------
+	# home page
+	--------------------------------------------------------------*/
+	@import "home-page";
+	/*--------------------------------------------------------------
+	# policew
+	--------------------------------------------------------------*/
+	@import "polices";
+	/*--------------------------------------------------------------
+	# list of products
+	--------------------------------------------------------------*/
+	@import "list-of-products";
+	/*--------------------------------------------------------------
+	# about us page
+	--------------------------------------------------------------*/
+	@import "about-us-page";
+	/*--------------------------------------------------------------
+	# single page of product
+	--------------------------------------------------------------*/
+	@import "single-page-of-product";
+	/*--------------------------------------------------------------
+	# cart
+	--------------------------------------------------------------*/
+	@import "cart";
+	/*--------------------------------------------------------------
+	# contact us page
+	--------------------------------------------------------------*/
+	@import "contact-us-page";
+	/*--------------------------------------------------------------
+	# media styles
+	--------------------------------------------------------------*/
+	@import "media";
+
+/*--------------------------------------------------------------
+# General styles
+--------------------------------------------------------------*/
+
+body {
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	background: #fff;
+}
+
+$Arial: 'Arial', sans-serif;
+$MyriadPro: 'MyriadPro', sans-serif;
+$Swiss721BT: 'Swiss721BT', sans-serif;
+$HelveticaNeueLTPro: 'HelveticaNeueLTPro', sans-serif;
+
+
+
+.wrapper {
+	max-width: 1030px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+	@include border-box;
+	position: relative;
+}
+a {
+	text-decoration: none;
+}
+.direction {
+	@include direction;
+}
+
+.videoWrapper {
+	@include videoWrapper;
+}
+.mapWrapper {
+	@include mapWrapper;
+	border-top: 7px solid #c76666;
+	#mapWrapper {
+		min-height: 755px;
+		height: 100%;
+		width: 100%;
+		min-width: 500px;
+	}
+	.gm-style-iw * {
+		display: block;
+		width: 100%;
+	}
+	.gm-style-iw h4, .gm-style-iw p {
+		margin: 0;
+		padding: 0;
+	}
+	.gm-style-iw a {
+		color: #4272db;
+	}
+}
+.lb-data .lb-details {
+	display: none;
+}
+.map-marker-label {
+	position: absolute;
+	left: 60%;
+	top: 195px;
+	transform: translate(-50%, -50%);
+	color: #c76666;
+	font: 700 25px / 27px $Arial;
+	cursor: pointer;
+	z-index: 99999;
+}
