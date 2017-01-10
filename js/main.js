@@ -21,6 +21,17 @@ $(function () {
 	});
 });
 /*--------------------------*/
+$(function () {
+	$('.navigations-menu-block ul li a').each(function () {
+		var location = window.location.pathname;
+		var link = this.pathname;
+		var result = location.match(link);
+		if(result && link.length > 0) {
+			$(this).addClass('menu-item-active');
+		}
+	});
+});
+/*--------------------------*/
 
 // DESCTOP MENU
 $('#toggle').click(function() {

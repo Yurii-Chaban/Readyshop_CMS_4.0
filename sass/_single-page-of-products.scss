@@ -1,5 +1,5 @@
 .type-nav-single-product-page {
-	height: 140px;
+	height: auto;
 	overflow: hidden;
 	.full-img {
 		height: 600px;
@@ -13,17 +13,17 @@
 		border: none;
 		padding: 0;
 
-		.mobile-back-btn {
-			float: left;
-			color: #8b8b8b;
-			font: 700 26px / 28px $Arial;
+		.title-block {
+			.desctop {
+				display: none;
+			}
 		}
 	}
 }
 
 .single-product-page-preffoter {
 
-	background: url("../images/special-offers-bg.jpg") no-repeat;
+	background: url("../images/product-bg.jpg") no-repeat;
 	background-size: cover;
 	background-position: center;
 
@@ -34,20 +34,44 @@
 		overflow: hidden;
 		position: relative;
 		padding-bottom: 35px;
-		border-top: 2px solid #fff;
-		border-bottom: 2px solid #fff;
 		background: rgba(0, 0, 0, 0.4);
 
 		.back-block {
-			display: none;
+			margin: 0 auto;
+			text-align: center;
+			color: #d2570f;
+			font: 700 30px / 32px $Arial;
+			text-transform: uppercase;
+			a {
+				color: #d2570f;
+			}
+			img {
+				display: none;
+			}
 		}
 
-		.product-name {
-			color: #fff;
-			font: 700 25px / 28px $Arial;
-			
-			span {
-				display: block;
+		.for-product-name-title {
+			overflow: hidden;
+
+			.white-edit-title {
+				float: right;
+				.white-edit {
+					img {
+						filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+						filter: gray; /* IE6-9 */
+						-webkit-filter: grayscale(100%) brightness(0%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+						@include transition;
+					}
+				}
+			}
+			.product-name {
+				clear: both;
+				color: #fff;
+				font: 700 25px / 28px $Arial;
+
+				span {
+					display: block;
+				}
 			}
 		}
 
@@ -68,7 +92,7 @@
 
 				#ninja-slider-prev, 
 				#ninja-slider-next {
-					background: rgba(199,102,102, 0.8);
+					background: rgba(46,46,46, 0.8);
 				}
 
 				ul {
@@ -77,6 +101,13 @@
 					li {
 						.ns-img {
 							background-size: cover;
+						}
+
+						.edit-big {
+							position: absolute;
+							top: 10px;
+							right: 15px;
+							z-index: 2;
 						}
 					}
 				}
@@ -91,536 +122,126 @@
 				max-width: 100%;
 				padding: 0;
 			}
+
+			.add-more {
+				display: block;
+				margin: 20px 0 40px 15px;
+				color: #d15610;
+				font: 700 25px / 28px $Arial;
+			}
 		}
 
 		.customize-nav {
-			-ms-box-orient: horizontal;
 			display: -webkit-box;
 			display: -moz-box;
 			display: -ms-flexbox;
 			display: -moz-flex;
 			display: -webkit-flex;
+			-webkit-flex-wrap: wrap;
+			flex-wrap: wrap;
 			display: flex;
-			flex-flow: column;
+			justify-content: space-between;
 			clear: both;
+			overflow: hidden;
 
-			.price-block {
-				-moz-box-ordinal-group: 2;
-				-webkit-box-ordinal-group: 2;
-				-webkit-order: 2;
-				-ms-flex-order: 2;
-				order: 2;
-				overflow: hidden;
-				margin: 15px 0 38px;
-				padding: 0 15px;
-				.price {
-					float: left;
-					color: #ca7070;
-					font-family: Arial;
-					font-weight: 400;
+			.price,
+			.size {
+				width: 49%;
 
-					.dollars {
-						font-size: 20px;
-						line-height: 28px;
-					}
-					.main-price {
-						font-size: 35px;
-						line-height: 37px;
-					}
-					.sub-price {
-						font-size: 22px;
-						line-height: 28px;
-					}
+				.block-title {
+					margin: 0;
+					padding: 10px 0 10px 10px;
+					color: #565656;
+					font: 700 30px / 32px $Arial;
+					background-color: #b9b9b9;
 				}
 
-				.card-block {
-					float: right;
-					padding: 7px 0 0;
+				.for-edit-block-title {
+					background-color: #b9b9b9;
+					overflow: hidden;
 
-					.add-to-card {
-						display: inline-block;
-						margin: 0 10px 0 0;
-						color: #fff;
-						font: 400 25px / 28px $Arial;
-					}
-					img {
-						float: right;
-						margin-top: 2px;
-					}
-				}
-			}
-
-			.size-number-block {
-				-moz-box-ordinal-group: 1;
-				-webkit-box-ordinal-group: 1;
-				-webkit-order: 1;
-				-ms-flex-order: 1;
-				order: 1;
-
-				.counter {
-					display: none;
-				}
-
-				.number,
-				.size {
-					position: relative;
-					min-height: 45px;
-					background: rgba(0, 0, 0, 0.4);
-					border-top: 1px solid rgba(255, 255, 255, 0.3);
-					border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-					margin: 5px 0;
-					padding: 0 15px;
-
-
-					.title {
+					.block-title {
 						float: left;
-						margin: 10px 0 0 0;
-						color: #fff;
-						font: 400 22px / 28px $Arial;
+						margin: 0 10px 0 0;
 					}
-
-					#quantiting-block,
-					#sizes-block {
-						float: right;
+					.edit-title {
+						float: left;
+						margin: 10px 0 0;
 					}
+				}
+				.price-list,
+				.size-list {
+					li {
+						display: block;
+						margin: 5px auto;
+						padding: 10px 0 10px 10px;
+						background-color: #ffffff;
 
-					.ui.selection.dropdown {
-						background: transparent;
-						border: none;
-						outline: none;
-						min-height: 45px;
-						padding: 5px 30px;
-
-						&:after {
-							content: "";
-							position: absolute;
-							top: 0;
-							right: -80px;
-							width: 140px;
-							height: 100%;
-							z-index: 0;
-							background: -prefix-linear-gradient(left, rgba(255,255,255,0.5),
-								rgba(255,255,255,0.003));
-
-							background: linear-gradient(to right, rgba(255,255,255,0.5),
-								rgba(255,255,255,0.003));
-							-webkit-filter: blur(20px);
-							-moz-filter: blur(20px);
-							-o-filter: blur(20px);
-							-ms-filter: blur(20px);
-							filter: blur(20px);
-
-						} 
-
-						.menu {
-							min-width: 60px;
-							width: 80px;
+						p {
+							float: left;
+							margin: 0 10px 0 0;
+							color: #565656;
+							text-transform: uppercase;
+							font: 400 30px / 32px $Arial;
 						}
 					}
-					.ui.dropdown>.text {
-						color: #fff;
-						font: 400 22px / 28px $Arial;
-					}
-					.ui.dropdown>.dropdown.icon {
-						font-size: 30px;
-						font-size: 30px;
-						line-height: 30px;
-						margin: -.88571429em;
-						padding: 7px 0 0;
-					}
-					.ui.selection.dropdown>.dropdown.icon {
-						opacity: 1;
-					}
-					@media only screen and (max-width: 767px) {
-						.ui.selection.dropdown .menu {
-							max-height: 12rem;
+				}
+
+				.size-list {
+					li {
+						p {
+							min-width: 60px;
 						}
 					}
 				}
 			}
+
 		}
 
 		.description-product {
-			.descritpion-title {
-				margin: 0 0 14px;
-				color: #fff;
-				font: 700 26px / 28px $Arial;
+
+			.for-title {
+				overflow: hidden;
+
+				.descritpion-title {
+					float: left;
+					margin: 0 15px 14px 0;
+					color: #fff;
+					font: 700 26px / 28px $Arial;
+				}
+
+				.white-edit-title {
+					overflow: hidden;
+				}
+
 			}
 
-			p {
-				color: #fff;
-				font: 400 18px / 22px $Arial;
-				text-align: justify;
+			.for-description {
+
+				.white-edit-title {
+					float: right;
+				}
+
+				p {
+					clear: both;
+					color: #fff;
+					font: 400 18px / 22px $Arial;
+					text-align: justify;
+				}
 			}
 		}
 	}
 
-	.related-slider-block {
-		max-width: 977px;
-		margin: 0 auto;
-		.slider-title {
-			margin: 17px auto 20px;
-			text-align: center;
-			color: #fff;
-			font: 700 18px / 22px $Arial;
-			text-transform: uppercase;
-		}
+	.for-seo-toolbar {
+		margin: 0;
+		padding: 65px 0 50px;
+		background-image: url("../images/welcome-bg.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
 
-		.related-product-slider {
-			margin: 20px auto;
-			overflow: hidden;
-
-			* {
-				outline: none;
-			}
-
-			.slider-item {
-				position: relative;
-				@include transition;
-				margin-right: 20px;
-
-				/*-------------------------*/
-				@-webkit-keyframes card-block-animation {
-					0% {
-						right: -100%;
-					}
-					50% {
-						right: -50%;
-					}
-					100% {
-						right: 0;
-					}
-				}
-				@-moz-keyframes card-block-animation {
-					0% {
-						right: -100%;
-					}
-					50% {
-						right: -50%;
-					}
-					100% {
-						right: 0;
-					}
-				}
-				@-o-keyframes card-block-animation {
-					0% {
-						right: -100%;
-					}
-					50% {
-						right: -50%;
-					}
-					100% {
-						right: 0;
-					}
-				}
-				@keyframes card-block-animation {
-					0% {
-						right: -100%;
-					}
-					50% {
-						right: -50%;
-					}
-					100% {
-						right: 0;
-					}
-				}
-				/*-------------------------*/
-				@-webkit-keyframes hulf-block-animation {
-					0% {
-						left: -100%;
-					}
-					50% {
-						left: -50%;
-					}
-					100% {
-						left: 0;
-					}
-				}
-				@-moz-keyframes hulf-block-animation {
-					0% {
-						left: -100%;
-					}
-					50% {
-						left: -50%;
-					}
-					100% {
-						left: 0;
-					}
-				}
-				@-o-keyframes hulf-block-animation {
-					0% {
-						left: -100%;
-					}
-					50% {
-						left: -50%;
-					}
-					100% {
-						left: 0;
-					}
-				}
-				@keyframes hulf-block-animation {
-					0% {
-						left: -100%;
-					}
-					50% {
-						left: -50%;
-					}
-					100% {
-						left: 0;
-					}
-				}
-				/*-------------------------*/
-
-				@-webkit-keyframes view-animation {
-					0% {
-						left: -100%;
-					}
-					50% {
-						left: -50%;
-					}
-					100% {
-						left: 100%;
-					}
-				}
-				@-moz-keyframes view-animation {
-					0% {
-						left: -100%;
-					}
-					50% {
-						left: -50%;
-					}
-					100% {
-						left: 100%;
-					}
-				}
-				@-o-keyframes view-animation {
-					0% {
-						left: -100%;
-					}
-					50% {
-						left: -50%;
-					}
-					100% {
-						left: 100%;
-					}
-				}
-				@keyframes view-animation {
-					0% {
-						left: -100%;
-					}
-					50% {
-						left: -50%;
-					}
-					100% {
-						left: 100%;
-					}
-				}
-
-				&:hover {
-					.img-wrapper {
-						.overflow-block {
-							display: block;
-
-							.hulf-block-bg {
-								animation: hulf-block-animation 1s linear;
-								-webkit-animation-duration: 1s;
-								animation-duration: 1s;
-								animation-fill-mode: forwards;
-								animation-direction: normal;
-
-								.view {
-									animation: hulf-block-animation 1s linear;
-									-webkit-animation-duration: 1s;
-									animation-duration: 1s;
-									animation-fill-mode: forwards;
-									animation-direction: normal;
-								}
-							}
-
-							.card-block {
-								animation: card-block-animation 0.85s linear;
-								-webkit-animation-duration: 0.85s;
-								animation-duration: 0.85s;
-								animation-fill-mode: forwards;
-								animation-direction: normal;
-							}
-						}
-					}
-				}
-
-				.img-wrapper {
-					width: 227px;
-					height: 304px;
-					position: relative;
-					overflow: hidden;
-
-					img {
-						width: auto;
-						height: 100%;
-					}
-
-					.overflow-block {
-						display: none;
-						position: absolute;
-						overflow: hidden;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 86%;
-						z-index: 2;
-						@include transition;
-						
-						.hulf-block-bg {
-							float: left;
-							width: 60%;
-							height: 100%;
-							position: relative;
-							left: -100%;
-							background: rgba(199,102,102, 0.8);
-
-							.view {
-								position: relative;
-								left: -100%;
-								display: block;
-								width: 62px;
-								height: 100%;
-								float: right;
-								color: white;
-								font: 700 20px / 22px $Arial;
-								@include transition;
-								cursor: pointer;
-								background-color: rgba(0, 0, 0, 0.3);
-
-								span {
-									position: absolute;
-									top: 50%;
-									right: 5px;
-									transform: translateY(-50%);
-									display: block;
-									width: 42px;
-									height: 34px;
-									span {
-										padding-top: 5px;
-									}
-
-									img {
-										position: absolute;
-										z-index: 3;
-										top: 50%;
-										left: 50%;
-										transform: translate(-50%, -50%);
-										opacity: 0;
-										display: block;
-									}
-
-									&:hover {
-
-										span {
-											opacity: 0;
-										}
-
-										img {
-											opacity: 1;
-										}
-									}
-								}
-							}
-						}
-
-						.card-block {
-							float: right;
-							width: 40%;
-							height: 100%;
-							background: rgba(228,228,228, 0.8);
-							position: relative;
-							right: -100%;
-							@include transition;
-
-							&:hover {
-								background: rgba(204,204,204, 0.8);
-
-								a {
-									color: #fff;
-								}
-							}
-
-							a {
-								position: absolute;
-								top: 50%;
-								right: 2px;
-								text-align: center;
-								transform: translateY(-50%);
-								color: #828282;
-								font: 400 18px / 22px $Arial;
-								@include transition;
-
-								span {
-
-									img {
-										position: absolute;
-										z-index: 3;
-										top: 50%;
-										left: 50%;
-										transform: translate(-50%, -50%);
-										opacity: 0;
-										width: 62px;
-										height: 54px;
-									}
-
-									&:hover {
-
-										& > span {
-											opacity: 0;
-										}
-
-										img {
-											opacity: 1;
-										}
-									}
-								}
-							}
-						}
-
-					}
-
-					.item-title {
-						width: 100%;
-						position: absolute;
-						left: 0;
-						bottom: 0;
-						padding: 15px 0 14px;
-						background: rgba(0, 0, 0, 0.6);
-						text-align: center;
-						margin: 0 auto;
-
-						color: white;
-						font: 700 13px / 15px $Arial;
-					}
-				}
-
-				.price-block {
-					margin: 0 auto;
-					padding: 8px 0 7px;
-					text-align: center;
-					background: #c66666;
-					color: #fff;
-					font-family: "Arial", sans-serif;
-					font-weight: 400;
-					
-					.dollar,
-					.sub-price {
-						font-size: 11px;
-					}
-
-					.main-price {
-						font-size: 17px;
-					}
-				}
-			}
-		}
-
-		.more-button {
-			display: none;
+		.box-border {
+			margin: 0 auto !important;
 		}
 	}
 }
