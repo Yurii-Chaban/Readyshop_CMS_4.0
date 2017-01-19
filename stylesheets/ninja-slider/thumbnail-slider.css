@@ -139,7 +139,7 @@
 }
 
 #thumbnail-slider-next::before {
-    bottom:12px;
+    bottom:6px;
     -ms-transform:rotate(135deg);/*IE9*/
     -webkit-transform:rotate(-135deg);
     transform: rotate(-135deg);

@@ -701,7 +701,7 @@
 					margin: 25px auto 0;
 					text-align: center;
 					color: #ffbd97;
-					font: 700 18px / 22px $Arial;
+					font: 400 18px / 22px $Arial;
 					text-transform: uppercase;
 				}
 			}
@@ -1001,6 +1001,7 @@
 			.for-product-name-title {
 				width: 331px;
 				float: right;
+				margin: -17px 0 0 0;
 
 				.product-name {
 					margin: 22px 0 0;
@@ -1042,7 +1043,7 @@
 			.navigation {
 				float: right;
 				width: 370px;
-				margin: -390px 0 0;
+				margin: -450px 0 0;
 
 				.wrapper {
 					padding: 0 0 0 15px;
@@ -1439,6 +1440,27 @@
 			max-width: 950px;
 		}
 	}
+
+	.single-product-page-preffoter {
+		.preffoter-content-bg {
+			.choose-category-block,
+			.special-offers-product {
+				padding: 0;
+			}
+
+			.navigation {
+				.add-more {
+					margin: 15px 25px 30px 15px;
+				}
+			}
+
+			#add-category {
+				margin: 20px 15px 50px 0;
+			}
+		}
+
+	}
+
 }
 
 @media (min-width: 1200px) {
