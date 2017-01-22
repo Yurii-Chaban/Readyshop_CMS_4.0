@@ -168,7 +168,7 @@ $(document).ready(function() {
 $(document).ready(function($) {
 	$('.ui.dropdown').dropdown();
 }); 
-	$(document).ready(function($) {	
+$(document).ready(function($) {	
 	$("#add-category").click(function () {
 		$(".choose-category-block").append('<div class="ui compact selection dropdown" tabindex="0"><i class="dropdown icon"></i><div class="text">Choose Category</div><div class="menu"><div class="item">Dresses</div><div class="item">Jackets</div><div class="item">Jeans</div><div class="item">Shirts</div></div></div>');
 	});
